@@ -5,7 +5,7 @@ var con=db.createConnection(
     host:'localhost',
     user:'root',
     password:"",
-    database:'project_search'
+    database:'searchengine'
 });
 
 con.connect(function(err){

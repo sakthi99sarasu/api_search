@@ -4,12 +4,12 @@ const productmodel=require('../models/model');
 
 exports.retrieveproduct=(req,res)=>{
 
-    const song=new productmodel({
-        song_name :req.body.name,
+    const key=new productmodel({
+        key_name :req.body.name,
         
     });
-   // console.log(song);
-    productmodel.retrieve(song,(err,data)=>{
+   // console.log(key);
+    productmodel.retrieve(key,(err,data)=>{
         //console.log(data);
         if(err){
             res.json({Status:0, Message:"Can't Show the Details"} );
@@ -30,7 +30,7 @@ exports.retrieveresult=(req,res)=>{
         keyword :req.params.name,
         
     });
-    //console.log(song);
+    //console.log(key);
     productmodel.retrieveresult(search,(err,data)=>{
       //  console.log(data);
         if(err){
@@ -71,6 +71,6 @@ exports.login=(req,res)=>{
         
   
     
-    //console.log(song);
+    //console.log(key);
    
 }
